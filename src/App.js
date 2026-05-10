@@ -1,13 +1,64 @@
-import logo from './logo.svg';
+
+import { useEffect, useState } from 'react';
+import axios from 'axios'; 
 import './App.css';
+import CardRecipe from "./components/CardRecipe";
+import React from 'react';
+
 
 function App() {
+
+
+const [recipes ,setproducts]=useState([]);
+
+
+const gainProducts=(async()=>{
+
+  try{
+
+const SetApi=await axios.get(" https://dummyjson.com/recipes")
+setproducts(SetApi.data.recipes)
+console.log(SetApi)
+
+
+  }catch(error){
+console.log("error" ,error)
+  }
+
+
+
+})
+
+
+
+
+
+useEffect(()=>{
+  gainProducts()
+},[])
+
+
+
+
+
+
   return (
     <div className="App">
-      <header className="App-header">
      <h1>Receipe Api</h1>
+      {recipes.map((product)=>{
 
-      </header>
+     return(
+      <CardRecipe
+      key={product.id}  name={product.name} image={product.image}
+      />
+     )
+
+
+      })}
+    
+
+       
+
     </div>
   );
 }
