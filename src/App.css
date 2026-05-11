@@ -1,4 +1,80 @@
+/* App.css */
 
-.main{
-    padding: 50px;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+  background: #f4f4f4;
+}
+
+.App{
+  width: 100%;
+  padding: 30px;
+  text-align: center;
+}
+
+.App h1{
+  margin-bottom: 30px;
+  color: #222;
+}
+
+.recipe-container{
+  display: inline-block;
+  margin: 12px;
+  vertical-align: top;
+}
+
+.recipe-style{
+  width: 230px;
+  height: 300px;
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: 0.3s;
+  position: relative;
+}
+
+.recipe-style:hover{
+  transform: translateY(-5px);
+}
+
+.recipe-style img{
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+}
+
+.recipe-style h1{
+  font-size: 14px;
+  padding: 12px 10px 8px;
+  color: #222;
+  overflow: hidden;
+}
+
+.recipe-style h6{
+  font-size: 16px;
+  color: orange;
+  margin-top: 10px;
+}
+
+.recipe-style button{
+  width: 85%;
+  border: none;
+  border-radius: 8px;
+  background: #222;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.recipe-style button:hover{
+  background: orange;
+  color: black;
 }

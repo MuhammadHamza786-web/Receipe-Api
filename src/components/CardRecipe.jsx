@@ -1,13 +1,14 @@
 import React from 'react'
 
-const CardRecipe = ({name ,image}) => {
+const CardRecipe = ({name ,image, rating}) => {
   return (
-    <div className="main">
+    <div className="recipe-container">
 
     <div className='recipe-style'>
-        <h1>{name}</h1>
         <img src={image} alt="image" />
-        
+        <h6>{rating}</h6>
+        <h1>{name}</h1>
+        <button>Add To Cart</button>
     </div>
     </div>
   )

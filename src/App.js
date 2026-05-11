@@ -40,17 +40,14 @@ useEffect(()=>{
 
 
 
-
-
   return (
     <div className="App">
-     <h1>Receipe Api</h1>
+     <h1>Recipe Card</h1>
       {recipes.map((product)=>{
 
      return(
       <CardRecipe
-      key={product.id}  name={product.name} image={product.image}
-      />
+      key={product.id} name={product.name} image={product.image} rating={product.rating}/>
      )
 
 
