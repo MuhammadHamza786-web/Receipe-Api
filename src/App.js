@@ -42,7 +42,7 @@ useEffect(()=>{
 
   return (
     <div className="App">
-     <h1>Recipe Card</h1>
+     <h1 className='heading'>Recipe Card</h1>
       {recipes.map((product)=>{
 
      return(

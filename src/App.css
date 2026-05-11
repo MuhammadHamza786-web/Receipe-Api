@@ -55,6 +55,7 @@ body{
   padding: 12px 10px 8px;
   color: #222;
   overflow: hidden;
+  font-style: italic;
 }
 
 .recipe-style h6{
